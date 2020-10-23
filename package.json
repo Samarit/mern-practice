@@ -1,0 +1,29 @@
+{
+  "name": "mern-practice",
+  "version": "1.0.0",
+  "description": "App for practicing MERN stack (MongoDB + ExpressJS + React + NodeJS)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "express",
+    "mongo"
+  ],
+  "author": "Aleksey Kislyak <kislyakaleksey@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  }
+}
