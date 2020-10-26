@@ -1,0 +1,23 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+.btn-auth {
+  margin-right: 10px;
+}
+
+input.yellow-input {
+  border-bottom: 1px solid black !important;
+  box-shadow: 0 1px 0 0 black;
+}
+
+input.yellow-input + label {
+  color: white !important;
+}
+
+input.yellow-input:focus {
+  border-bottom: 1px solid yellow !important;
+  box-shadow: 0 1px 0 0 yellow;
+}
+
+input.yellow-input:focus + label {
+  color: yellow !important;
+}
