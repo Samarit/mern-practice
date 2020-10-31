@@ -11,6 +11,10 @@ export const AuthPage = () => {
     const [form, setForm] = useState({ email: '', password: ''})
 
     useEffect(() => {
+        window.M.updateTextFields()
+    }, [])
+
+    useEffect(() => {
         message(error)
         clearError()
     }, [message, error, clearError])
@@ -21,7 +25,7 @@ export const AuthPage = () => {
 
     const registerHandler = async () => {
         try {
-            const data = await request ('api/auth/register', 'POST', {...form})
+            const data = await request ('api/auth/register', 'POST', form)
             message(data.message)
         } catch (error) {
             
@@ -34,14 +38,14 @@ export const AuthPage = () => {
             message(data.message)
             auth.login(data.token, data.userId)
         } catch (error) {
-            
+            // Errors already catched in useHttp hook
         }
     }
 
     return (
         <div className="row">
             <div className="col s6 offset-s3">
-                <h1>Shorten your link</h1>
+                <h1>Links reducer</h1>
                 <div className="card blue darken-1">
                     <div className="card-content white-text">
                         <span className="card-title">Authorisation</span>

@@ -1,5 +1,6 @@
 {
     "port": 8888,
     "mongoURI": "mongodb+srv://Samarit:1234qwer@cluster0.ebun5.mongodb.net/<dbname>?retryWrites=true&w=majority",
-    "jwtSecret": "my secret string"
+    "jwtSecret": "my secret string",
+    "baseUrl": "http://localhost:8888"
 }

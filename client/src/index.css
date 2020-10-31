@@ -1,5 +1,9 @@
 @import "~materialize-css/dist/css/materialize.min.css";
 
+.nav-wrapper {
+  padding: 0px 2rem;
+}
+
 .btn-auth {
   margin-right: 10px;
 }
