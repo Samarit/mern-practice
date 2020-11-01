@@ -8,14 +8,14 @@ module.exports = (req, res, next) => {
 
     try {
         const token = req.headers.authorization.split(' ')[1] // 'Bearer $TOKEN'
-
         if (!token) {
             return res.status(401).json({ message: 'No authorisation' })
         }
 
-        const decoded = jwt.verify(token, config.getItem('jwtSecret'))
+        const decoded = jwt.verify(token, config.get('jwtSecret'))
         req.user = decoded
+        next()
     } catch (e) {
-        res.status(401).json({ message: 'No authorisation' })
+        res.status(401).json({ message: 'No authorisation error' })
     }
 }

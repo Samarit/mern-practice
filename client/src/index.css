@@ -4,6 +4,10 @@
   padding: 0px 2rem;
 }
 
+.col-create {
+  padding-top: 2rem !important;
+}
+
 .btn-auth {
   margin-right: 10px;
 }
