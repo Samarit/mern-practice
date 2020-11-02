@@ -27,9 +27,7 @@ export const AuthPage = () => {
         try {
             const data = await request ('api/auth/register', 'POST', form)
             message(data.message)
-        } catch (error) {
-            
-        }
+        } catch (e) {}
     }
 
     const loginHandler = async () => {
@@ -37,9 +35,7 @@ export const AuthPage = () => {
             const data = await request ('api/auth/login', 'POST', {...form})
             message(data.message)
             auth.login(data.token, data.userId)
-        } catch (error) {
-            // Errors already catched in useHttp hook
-        }
+        } catch (e) {}
     }
 
     return (

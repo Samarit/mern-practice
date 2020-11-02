@@ -16,6 +16,6 @@ module.exports = (req, res, next) => {
         req.user = decoded
         next()
     } catch (e) {
-        res.status(401).json({ message: 'No authorisation error' })
+        res.status(401).json({ message: 'No authorisation error ' + e.message})
     }
 }

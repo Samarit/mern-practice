@@ -28,7 +28,7 @@ router.post('/generate', auth, async (req, res) => {
 
         res.status(201).json({ link })
     } catch (e) {
-        res.status(500).json({message: 'Something went wrong with server, try again! Error: ' + e.message})
+        res.status(500).json({message: 'Something went wrong with GENERATE, try again! Error: ' + e.message})
     }
 })
 
@@ -37,16 +37,16 @@ router.get('/', auth, async (req, res) => {
         const links = await Link.find({ owner: req.user.userId })
         res.json(links)
     } catch (e) {
-        res.status(500).json({message: 'Something went wrong with server, try again! Error: ' + e.message})
+        res.status(500).json({message: 'Something went wrong with GET handler, try again! Error: ' + e.message})
     }
 })
 
-router.post('/:id', auth, async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
         const link = await Link.findById(req.params.id) 
         res.json(link)
     } catch (e) {
-        res.status(500).json({message: 'Something went wrong with server, try again! Error: ' + e.message})
+        res.status(500).json({message: 'Something went wrong with GET ID, try again! Error: ' + e.message})
     }
 })
 

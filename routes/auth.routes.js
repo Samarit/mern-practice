@@ -80,7 +80,8 @@ router.post('/login',
             config.get('jwtSecret'),
             {expiresIn: '1h'}
         )
-
+        
+        console.log('User-token: ' + token);
         res.json({token, userId: user.id})
 
     } catch(e) {
